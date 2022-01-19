@@ -1,0 +1,4 @@
+<category name="Elfsquad" color="blue">
+    <label text="Events"></label>
+    <block type="onConfigurationUpdate"></block>    
+</category>
