@@ -1,0 +1,34 @@
+<template
+    color="#ffa500"
+    output="Number">
+    <dummy>
+        <label>Feature value</label>
+        <text name="featureCode">Feature code</text>
+    </dummy>
+</template>
+
+<script>
+    function code(block){
+        const featureCode = block.getFieldValue('featureCode');
+
+        const fun = Plug.provide('elfsquadGetValueByCode', function(c) {
+            for (let step of window['elfsquad.configuration'].steps){
+                let stack = [...step.features];
+
+                while(stack.length > 0){
+                    let current = stack.pop();
+                    if (current.code == c){ return current.value; }
+                    for (let child of current.features){
+                        stack.push(child);
+                    }
+                }
+            }
+
+            return 0;
+        });
+
+        
+        return [`${fun}('${featureCode}')`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+    }
+
+</script>

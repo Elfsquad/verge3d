@@ -17,21 +17,16 @@
     }
 
     function code(block){
-        console.log('block', block);
-
         const stmnt = Blockly.JavaScript.statementToCode(block, 'stmnt');
         
         const fun = Plug.provide('elfsquadOnConfigurationUpdate', function(cb){
-    
-            console.log('register event listener');
             window.parent.addEventListener('message', function(e){
-
                 if (e.data && e.data.type == 'elfsquad.configurationUpdated'){
+                    window['elfsquad.configuration'] = e.data.data;
+                    console.log('configuration', window['elfsquad.configuration']);
                     cb();
-                }
-                 
+                }                 
             });
-
         });
         
         return `${fun}(${wrapStatements(stmnt)});`;

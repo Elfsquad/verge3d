@@ -1,4 +1,7 @@
 <category name="Elfsquad" color="blue">
     <label text="Events"></label>
-    <block type="onConfigurationUpdate"></block>    
+    <block type="onConfigurationUpdate"></block>   
+    
+    <label text="Actions"></label>
+    <block type="getValueByCode"></block>
 </category>
