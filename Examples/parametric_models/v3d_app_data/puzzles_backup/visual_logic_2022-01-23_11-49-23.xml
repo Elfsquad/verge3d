@@ -566,45 +566,26 @@
             </block>
           </value>
           <next>
-            <block type="setMorphFactor" id="91vXD$gZed*heZ!?%*w=">
-              <mutation xmlns="http://www.w3.org/1999/xhtml" useflexibletargetinputslot="false"></mutation>
-              <field name="TARGET_NAME">corners</field>
-              <value name="OBJ_NAME">
-                <shadow type="objectList" id="DQjG2J:#mU(tOQq99plO">
-                  <field name="FIELDNAME">mechanism_part</field>
+            <block type="setObjTransform" id="+Su.uU!P+E{2~1LksEmk">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
+              <field name="MODE">position</field>
+              <field name="OFFSET">FALSE</field>
+              <value name="TARGETOBJ">
+                <shadow type="objectList" id="mG98/Q8=4SWInDyO9H_x">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
                 </shadow>
+                <block type="objectList" id="yw^6lNb/-+wspzIcT4nx">
+                  <field name="FIELDNAME">mechanism_slider_height</field>
+                </block>
               </value>
-              <value name="FACTOR">
-                <shadow type="math_number" id="Kfh+jozLmDL$4aJg(9,/">
-                  <field name="NUM">0</field>
-                </shadow>
-                <block type="Elfsquad/getValueByCode" id="q|aRSLskf/kkJ@er4+C_">
-                  <field name="featureCode">corners</field>
+              <value name="Z">
+                <block type="Elfsquad/getValueByCode" id="?2I2W%wHiXKn]t/QTP$I">
+                  <field name="featureCode">height</field>
                 </block>
               </value>
               <next>
-                <block type="setObjTransform" id="+Su.uU!P+E{2~1LksEmk">
-                  <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false" useworldspace="false"></mutation>
-                  <field name="MODE">position</field>
-                  <field name="OFFSET">FALSE</field>
-                  <value name="TARGETOBJ">
-                    <shadow type="objectList" id="mG98/Q8=4SWInDyO9H_x">
-                      <field name="FIELDNAME">&lt;none&gt;</field>
-                    </shadow>
-                    <block type="objectList" id="yw^6lNb/-+wspzIcT4nx">
-                      <field name="FIELDNAME">mechanism_slider_height</field>
-                    </block>
-                  </value>
-                  <value name="Z">
-                    <block type="Elfsquad/getValueByCode" id="?2I2W%wHiXKn]t/QTP$I">
-                      <field name="featureCode">height</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="procedures_callnoreturn" id="!U+5D`!GHE*0rH@?s5/G">
-                      <mutation name="updateHeight"/>
-                    </block>
-                  </next>
+                <block type="procedures_callnoreturn" id="!U+5D`!GHE*0rH@?s5/G">
+                  <mutation name="updateHeight"/>
                 </block>
               </next>
             </block>
@@ -1041,7 +1022,7 @@
                     </block>
                   </value>
                   <value name="MIN">
-                    <shadow type="math_number" id="@h82a;gU~:tq@Wum}F*V">
+                    <shadow type="math_number" id="Swc{al-u#P.z{RcJuP({">
                       <field name="NUM">-1</field>
                     </shadow>
                     <block type="math_arithmetic" id="zd/D?lRm?Bkd``#0$}d:">
@@ -1102,7 +1083,7 @@
                         </block>
                       </value>
                       <value name="MIN">
-                        <shadow type="math_number" id="]D5+SBA:t^XM=4][xgJ7">
+                        <shadow type="math_number" id="+3$XgQO+VnUIk~)4jTT!">
                           <field name="NUM">-1</field>
                         </shadow>
                         <block type="math_arithmetic" id="HH_k||ep(+0dE,lleQ0!">
