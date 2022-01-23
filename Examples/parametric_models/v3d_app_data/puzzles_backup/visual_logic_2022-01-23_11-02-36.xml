@@ -547,7 +547,7 @@
     </block>
   </tab>
   <tab name="mechanism" type="SecondaryTab" active="true" scrollx="1405.5530974246794" scrolly="940.9609935654735" scale="0.8851701341936808">
-    <block xmlns="https://developers.google.com/blockly/xml" type="Elfsquad/onConfigurationUpdate" id="+yJ%d9unoN[RS%U`z8C2" x="-750" y="-750">
+    <block xmlns="https://developers.google.com/blockly/xml" type="Elfsquad/onConfigurationUpdate" id="+yJ%d9unoN[RS%U`z8C2" x="-890" y="-630">
       <statement name="stmnt">
         <block type="setMorphFactor" id="1t(R?7]s+AD[A^B(^B;J">
           <mutation xmlns="http://www.w3.org/1999/xhtml" useflexibletargetinputslot="false"></mutation>
@@ -1022,7 +1022,7 @@
                     </block>
                   </value>
                   <value name="MIN">
-                    <shadow type="math_number" id="Swc{al-u#P.z{RcJuP({">
+                    <shadow type="math_number" id="mnk@sj[@2M$Y%@)ZNdCs">
                       <field name="NUM">-1</field>
                     </shadow>
                     <block type="math_arithmetic" id="zd/D?lRm?Bkd``#0$}d:">
@@ -1083,7 +1083,7 @@
                         </block>
                       </value>
                       <value name="MIN">
-                        <shadow type="math_number" id="+3$XgQO+VnUIk~)4jTT!">
+                        <shadow type="math_number" id="=B$[F({X@vJvW.$iqsAG">
                           <field name="NUM">-1</field>
                         </shadow>
                         <block type="math_arithmetic" id="HH_k||ep(+0dE,lleQ0!">
