@@ -4,4 +4,8 @@
     
     <label text="Actions"></label>
     <block type="getValueByCode"></block>
+    <block type="updateRequirementByCode"></block>
 </category>
+
+<script>
+</script>

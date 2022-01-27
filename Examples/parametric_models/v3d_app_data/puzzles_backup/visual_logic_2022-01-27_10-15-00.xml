@@ -546,16 +546,8 @@
       </statement>
     </block>
   </tab>
-  <tab name="mechanism" type="SecondaryTab" active="true" scrollx="1168.1705322265625" scrolly="1064.9998779296875" scale="1">
-    <block xmlns="https://developers.google.com/blockly/xml" type="execScript" id="RdLg;*i8D$A#hUN9Wq48" x="-810" y="-830">
-      <value name="TEXT">
-        <shadow type="textMultiline" id="=e3lUkXeVk=P%67ZgxS:">
-          <field name="HIGHLIGHT_MODE">javascript</field>
-          <field name="TEXT">window.top.postMessage({&#10;    type: 'updateConfiguration' &#10;}, '*');</field>
-        </shadow>
-      </value>
-    </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="Elfsquad/onConfigurationUpdate" id="+yJ%d9unoN[RS%U`z8C2" x="-810" y="-730">
+  <tab name="mechanism" type="SecondaryTab" active="true" scrollx="-244.44690257532056" scrolly="333.9609935654735" scale="0.8851701341936808">
+    <block xmlns="https://developers.google.com/blockly/xml" type="Elfsquad/onConfigurationUpdate" id="+yJ%d9unoN[RS%U`z8C2" x="-750" y="-750">
       <statement name="stmnt">
         <block type="setMorphFactor" id="1t(R?7]s+AD[A^B(^B;J">
           <mutation xmlns="http://www.w3.org/1999/xhtml" useflexibletargetinputslot="false"></mutation>
@@ -620,7 +612,7 @@
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="whenDraggedOver" id="fkXg$n{%emz6(*-`G~g`" x="-210" y="-370">
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenDraggedOver" id="fkXg$n{%emz6(*-`G~g`" x="870" y="-670">
       <field name="X_RAY">FALSE</field>
       <field name="LEFT_BUTTON">TRUE</field>
       <field name="MIDDLE_BUTTON">TRUE</field>
@@ -717,7 +709,7 @@
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="whenDraggedOver" id="NmKJ1,HQ7j!n0BbwuO#Q" x="-830" y="-330">
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenDraggedOver" id="NmKJ1,HQ7j!n0BbwuO#Q" x="130" y="-630">
       <field name="X_RAY">FALSE</field>
       <field name="LEFT_BUTTON">TRUE</field>
       <field name="MIDDLE_BUTTON">TRUE</field>
@@ -743,7 +735,7 @@
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="xdCGhe3Y?A-@rSqBwIHV" x="1110" y="-290">
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="xdCGhe3Y?A-@rSqBwIHV" x="1030" y="-290">
       <field name="EVENT">click</field>
       <field name="PARENT">TRUE</field>
       <value name="ID">
@@ -768,11 +760,6 @@
           <next>
             <block type="Elfsquad/updateRequirementByCode" id="CLFh{nfcEyQ6bA2bRjD3">
               <field name="featureCode">corners</field>
-              <value name="value">
-                <block type="math_number" id="[PCOsVqSiv6XK~W-_!YA">
-                  <field name="NUM">0</field>
-                </block>
-              </value>
             </block>
           </next>
         </block>
@@ -803,11 +790,6 @@
               <next>
                 <block type="Elfsquad/updateRequirementByCode" id="Lnd)SUY[{7n-{6$|eIDP">
                   <field name="featureCode">corners</field>
-                  <value name="value">
-                    <block type="math_number" id="-|v[,[jAL@l)-/v*5)Tl">
-                      <field name="NUM">0.5</field>
-                    </block>
-                  </value>
                 </block>
               </next>
             </block>
@@ -838,11 +820,6 @@
                   <next>
                     <block type="Elfsquad/updateRequirementByCode" id="CwOqs}o]X`4lE/+5FgOp">
                       <field name="featureCode">corners</field>
-                      <value name="value">
-                        <block type="math_number" id="}vAN8!HPOReUH%o5@[j0">
-                          <field name="NUM">1</field>
-                        </block>
-                      </value>
                     </block>
                   </next>
                 </block>
@@ -873,11 +850,6 @@
                       <next>
                         <block type="Elfsquad/updateRequirementByCode" id="[+MPL4%=pES!9--.*j9x">
                           <field name="featureCode">thickness</field>
-                          <value name="value">
-                            <block type="math_number" id="OJN25?+XgCZ!t|i{K`6V">
-                              <field name="NUM">0</field>
-                            </block>
-                          </value>
                         </block>
                       </next>
                     </block>
@@ -908,11 +880,6 @@
                           <next>
                             <block type="Elfsquad/updateRequirementByCode" id="rT^NQ[$}qjZzP?,r]W20">
                               <field name="featureCode">thickness</field>
-                              <value name="value">
-                                <block type="math_number" id="dMqn7mX8N4QurN.5gqUS">
-                                  <field name="NUM">0.5</field>
-                                </block>
-                              </value>
                             </block>
                           </next>
                         </block>
@@ -943,11 +910,6 @@
                               <next>
                                 <block type="Elfsquad/updateRequirementByCode" id="=HXV{D?F3Jm3L{H|LVrf">
                                   <field name="featureCode">thickness</field>
-                                  <value name="value">
-                                    <block type="math_number" id="4wbMV:CJTs}$3-~5agWN">
-                                      <field name="NUM">1</field>
-                                    </block>
-                                  </value>
                                 </block>
                               </next>
                             </block>
@@ -1109,7 +1071,7 @@
                     </block>
                   </value>
                   <value name="MIN">
-                    <shadow type="math_number" id="45O$L=zcD5S.AKFR$F0^">
+                    <shadow type="math_number" id="o{!;)81TU?f!$NrGAOqB">
                       <field name="NUM">-1</field>
                     </shadow>
                     <block type="math_arithmetic" id="zd/D?lRm?Bkd``#0$}d:">
@@ -1170,7 +1132,7 @@
                         </block>
                       </value>
                       <value name="MIN">
-                        <shadow type="math_number" id=";fmvwY(memRVXvi=o{Wa">
+                        <shadow type="math_number" id="_kuN2R=bcXjav,T75}S7">
                           <field name="NUM">-1</field>
                         </shadow>
                         <block type="math_arithmetic" id="HH_k||ep(+0dE,lleQ0!">

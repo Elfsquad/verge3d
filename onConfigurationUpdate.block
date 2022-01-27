@@ -23,12 +23,11 @@
             window.parent.addEventListener('message', function(e){
                 if (e.data && e.data.type == 'elfsquad.configurationUpdated'){
                     window['elfsquad.configuration'] = e.data.data;
-                    console.log('configuration', window['elfsquad.configuration']);
                     cb();
                 }                 
             });
         });
-        
+
         return `${fun}(${wrapStatements(stmnt)});`;
     }
 </script>

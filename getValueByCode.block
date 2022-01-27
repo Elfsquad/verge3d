@@ -12,6 +12,8 @@
         const featureCode = block.getFieldValue('featureCode');
 
         const fun = Plug.provide('elfsquadGetValueByCode', function(c) {
+            if (!window['elfsquad.configuration']) return 0;
+            
             for (let step of window['elfsquad.configuration'].steps){
                 let stack = [...step.features];
 

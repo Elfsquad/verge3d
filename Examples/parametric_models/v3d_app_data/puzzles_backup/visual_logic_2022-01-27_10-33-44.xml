@@ -546,16 +546,8 @@
       </statement>
     </block>
   </tab>
-  <tab name="mechanism" type="SecondaryTab" active="true" scrollx="1168.1705322265625" scrolly="1064.9998779296875" scale="1">
-    <block xmlns="https://developers.google.com/blockly/xml" type="execScript" id="RdLg;*i8D$A#hUN9Wq48" x="-810" y="-830">
-      <value name="TEXT">
-        <shadow type="textMultiline" id="=e3lUkXeVk=P%67ZgxS:">
-          <field name="HIGHLIGHT_MODE">javascript</field>
-          <field name="TEXT">window.top.postMessage({&#10;    type: 'updateConfiguration' &#10;}, '*');</field>
-        </shadow>
-      </value>
-    </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="Elfsquad/onConfigurationUpdate" id="+yJ%d9unoN[RS%U`z8C2" x="-810" y="-730">
+  <tab name="mechanism" type="SecondaryTab" active="true" scrollx="1310.7210693359375" scrolly="797.4122924804688" scale="1">
+    <block xmlns="https://developers.google.com/blockly/xml" type="Elfsquad/onConfigurationUpdate" id="+yJ%d9unoN[RS%U`z8C2" x="-750" y="-750">
       <statement name="stmnt">
         <block type="setMorphFactor" id="1t(R?7]s+AD[A^B(^B;J">
           <mutation xmlns="http://www.w3.org/1999/xhtml" useflexibletargetinputslot="false"></mutation>
@@ -620,7 +612,7 @@
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="whenDraggedOver" id="fkXg$n{%emz6(*-`G~g`" x="-210" y="-370">
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenDraggedOver" id="fkXg$n{%emz6(*-`G~g`" x="870" y="-670">
       <field name="X_RAY">FALSE</field>
       <field name="LEFT_BUTTON">TRUE</field>
       <field name="MIDDLE_BUTTON">TRUE</field>
@@ -717,7 +709,7 @@
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="whenDraggedOver" id="NmKJ1,HQ7j!n0BbwuO#Q" x="-830" y="-330">
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenDraggedOver" id="NmKJ1,HQ7j!n0BbwuO#Q" x="-410" y="-510">
       <field name="X_RAY">FALSE</field>
       <field name="LEFT_BUTTON">TRUE</field>
       <field name="MIDDLE_BUTTON">TRUE</field>
@@ -726,6 +718,21 @@
         <block type="objectList" id="66K^vItqCV%neDZtO$`m">
           <field name="FIELDNAME">mechanism_slider_height</field>
         </block>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenMoved" id="#KQf-xtJGxoqwQq0+,+]" x="-990" y="-370">
+      <value name="OBJECT">
+        <shadow type="objectList" id="KNp0*^_gQfM}FFKeGusy">
+          <field name="FIELDNAME">&lt;none&gt;</field>
+        </shadow>
+        <block type="objectList" id="1M8#/T?%quIN4[G]~D]L">
+          <field name="FIELDNAME">mechanism_slider_height</field>
+        </block>
+      </value>
+      <value name="DELTA">
+        <shadow type="math_number" id="p)x@s[WW^XsCx}Qjh?F4">
+          <field name="NUM">0.01</field>
+        </shadow>
       </value>
       <statement name="DO_MOVE">
         <block type="dragMove" id="i7yGLY1X#J^Zu{)^?NVL">
@@ -742,8 +749,51 @@
           </next>
         </block>
       </statement>
+      <statement name="DO_STOP">
+        <block type="Elfsquad/updateRequirementByCode" id="xUWa!2zNSx}:jh_LuUat">
+          <field name="featureCode">height</field>
+          <value name="value">
+            <block type="math_arithmetic" id="@J#%*h[~4En9clYYx6?t">
+              <field name="OP">MULTIPLY</field>
+              <value name="A">
+                <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number">
+                  <field name="NUM">2</field>
+                </shadow>
+                <block type="math_arithmetic" id="Iu^{S4d7HS-f@R]vWqIT">
+                  <field name="OP">MINUS</field>
+                  <value name="A">
+                    <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number">
+                      <field name="NUM">2</field>
+                    </shadow>
+                    <block type="getObjTransform" id="BP;OZP=w~4*h,0uy%)_H">
+                      <mutation xmlns="http://www.w3.org/1999/xhtml" useworldspace="false"></mutation>
+                      <field name="MODE">position</field>
+                      <field name="COORD">z</field>
+                      <value name="TARGETOBJ">
+                        <block type="objectList" id="GewHkpRZM?+5K];L.3k;">
+                          <field name="FIELDNAME">mechanism_slider_height</field>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <shadow type="math_number" id="YqbrXVA#M2O^BW37iScJ">
+                      <field name="NUM">0.38</field>
+                    </shadow>
+                  </value>
+                </block>
+              </value>
+              <value name="B">
+                <shadow type="math_number" id="wll%j!ssY+?Dqj#oyi0|">
+                  <field name="NUM">2</field>
+                </shadow>
+              </value>
+            </block>
+          </value>
+        </block>
+      </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="xdCGhe3Y?A-@rSqBwIHV" x="1110" y="-290">
+    <block xmlns="https://developers.google.com/blockly/xml" type="eventHTMLElem" id="xdCGhe3Y?A-@rSqBwIHV" x="1030" y="-290">
       <field name="EVENT">click</field>
       <field name="PARENT">TRUE</field>
       <value name="ID">
@@ -1109,7 +1159,7 @@
                     </block>
                   </value>
                   <value name="MIN">
-                    <shadow type="math_number" id="45O$L=zcD5S.AKFR$F0^">
+                    <shadow type="math_number" id="Nj#K]L2utu+3sYA]+P;a">
                       <field name="NUM">-1</field>
                     </shadow>
                     <block type="math_arithmetic" id="zd/D?lRm?Bkd``#0$}d:">
@@ -1170,7 +1220,7 @@
                         </block>
                       </value>
                       <value name="MIN">
-                        <shadow type="math_number" id=";fmvwY(memRVXvi=o{Wa">
+                        <shadow type="math_number" id="kfO|?X0w;jkte?o.aQJN">
                           <field name="NUM">-1</field>
                         </shadow>
                         <block type="math_arithmetic" id="HH_k||ep(+0dE,lleQ0!">

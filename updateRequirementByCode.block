@@ -1,0 +1,54 @@
+<template
+    color="#ffa500"
+    next="true"
+    prev="true"
+    inline="true">
+    <dummy>
+        <label>Update requirement</label>
+        <text name="featureCode">Feature code</text>
+        
+    </dummy>
+ 
+    <value name="value">
+        <label>Value</label>
+    </value>
+</template>
+
+<script>
+    function code(block){
+
+        const fun = Plug.provide('elfsquadUpdateRequirementByCode', function(featureCode, value) {
+            const configuration =  window['elfsquad.configuration'];
+            if (!configuration) return;
+
+            let nodeId = null;
+            let stack = [...configuration.steps];
+            while(stack.length > 0){
+                let current = stack.pop();
+                if (current.code == featureCode){
+                    nodeId = current.id;
+                    break;
+                }
+                for (let child of current.features){
+                    stack.push(child);
+                }
+            }
+
+            if (nodeId) {
+                window.top.postMessage({
+                    type: 'updateRequirement',
+                    data: {
+                        nodeId: nodeId,
+                        value: parseFloat(value)
+                    }
+                }, '*');
+            }
+        });
+        
+        const value = Blockly.JavaScript.valueToCode(block, 'value',
+            Blockly.JavaScript.ORDER_NONE) || '\'\'';
+        const featureCode = block.getFieldValue('featureCode');
+        return `${fun}('${featureCode}', ${value});`;
+    }
+
+</script>
