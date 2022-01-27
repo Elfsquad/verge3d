@@ -2,16 +2,16 @@
     color="#ffa500"
     output="Number">
     <dummy>
-        <label>Get value by code</label>
-        <text name="featureCode"></text>
+        <label>Get value by name</label>
+        <text name="featureName"></text>
     </dummy>
 </template>
 
 <script>
     function code(block){
-        const featureCode = block.getFieldValue('featureCode');
+        const featureName = block.getFieldValue('featureName');
 
-        const fun = Plug.provide('elfsquadGetValueByCode', function(c) {
+        const fun = Plug.provide('elfsquadGetValueByName', function(name) {
             if (!window['elfsquad.configuration']) return 0;
 
             for (let step of window['elfsquad.configuration'].steps){
@@ -19,7 +19,9 @@
 
                 while(stack.length > 0){
                     let current = stack.pop();
-                    if (current.code == c){ return current.value; }
+                    if (current.name == name) { 
+                        return current.value;
+                     }
                     for (let child of current.features){
                         stack.push(child);
                     }
@@ -30,6 +32,6 @@
         });
 
         
-        return [`${fun}('${featureCode}')`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+        return [`${fun}('${featureName}')`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
     }
 </script>

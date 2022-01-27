@@ -4,6 +4,7 @@
     
     <label text="Actions"></label>
     <block type="getValueByCode"></block>
+    <block type="getValueByName"></block>
     <block type="updateRequirementByCode"></block>
 </category>
 
