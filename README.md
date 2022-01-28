@@ -1,6 +1,12 @@
 # Elfsquad Verge3d blocks
 By using the Elfsquad Verge3d blocks you can easily interact with the Elfsquad showroom.
 
+## Getting started
+
+### Installation
+
+### Setting up the example
+
 ## Blocks
 
 ### Events
