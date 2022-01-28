@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <tab name="init" type="InitTab" active="false" scrollx="-89.99999999999977" scrolly="38.17781213190841" scale="1">
+  <tab name="init" type="InitTab" active="false" scrollx="-90.00000000000057" scrolly="38.17781213190847" scale="1">
     <block xmlns="https://developers.google.com/blockly/xml" type="initSettings" id="fZsW4Vqu;pn7)N7p7FZX" x="90" y="50">
       <field name="LOAD_COMP_ASSETS">FALSE</field>
       <field name="FULLSCREEN">FALSE</field>
@@ -546,8 +546,8 @@
       </statement>
     </block>
   </tab>
-  <tab name="mechanism" type="SecondaryTab" active="true" scrollx="739.142822265625" scrolly="546.2310791015625" scale="0.7912092655287302">
-    <block xmlns="https://developers.google.com/blockly/xml" type="execScript" id="RdLg;*i8D$A#hUN9Wq48" x="-790" y="-850">
+  <tab name="mechanism" type="SecondaryTab" active="true" scrollx="638.7329711914062" scrolly="586.3052978515625" scale="0.6260121018585129">
+    <block xmlns="https://developers.google.com/blockly/xml" type="execScript" id="RdLg;*i8D$A#hUN9Wq48" x="-870" y="-850">
       <value name="TEXT">
         <shadow type="textMultiline" id="=e3lUkXeVk=P%67ZgxS:">
           <field name="HIGHLIGHT_MODE">javascript</field>
@@ -555,7 +555,7 @@
         </shadow>
       </value>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="Elfsquad/onConfigurationUpdate" id="+yJ%d9unoN[RS%U`z8C2" x="-810" y="-730">
+    <block xmlns="https://developers.google.com/blockly/xml" type="Elfsquad/onConfigurationUpdate" id="+yJ%d9unoN[RS%U`z8C2" x="-870" y="-710">
       <statement name="stmnt">
         <block type="setMorphFactor" id="1t(R?7]s+AD[A^B(^B;J">
           <mutation xmlns="http://www.w3.org/1999/xhtml" useflexibletargetinputslot="false"></mutation>
@@ -620,7 +620,33 @@
         </block>
       </statement>
     </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="whenDraggedOver" id="fkXg$n{%emz6(*-`G~g`" x="-250" y="-530">
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenDraggedOver" id="NmKJ1,HQ7j!n0BbwuO#Q" x="-830" y="-330">
+      <field name="X_RAY">FALSE</field>
+      <field name="LEFT_BUTTON">TRUE</field>
+      <field name="MIDDLE_BUTTON">TRUE</field>
+      <field name="RIGHT_BUTTON">TRUE</field>
+      <value name="VALUE">
+        <block type="objectList" id="66K^vItqCV%neDZtO$`m">
+          <field name="FIELDNAME">mechanism_slider_height</field>
+        </block>
+      </value>
+      <statement name="DO_MOVE">
+        <block type="dragMove" id="i7yGLY1X#J^Zu{)^?NVL">
+          <field name="MODE">Z</field>
+          <value name="TARGETOBJ">
+            <block type="objectList" id="q@JB?)Ud/=y-qJ:de}94">
+              <field name="FIELDNAME">mechanism_slider_height</field>
+            </block>
+          </value>
+          <next>
+            <block type="procedures_callnoreturn" id="1v%2Q*wlM1F28e+pbsxr">
+              <mutation name="updateHeight"/>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="whenDraggedOver" id="fkXg$n{%emz6(*-`G~g`" x="-290" y="-350">
       <field name="X_RAY">FALSE</field>
       <field name="LEFT_BUTTON">TRUE</field>
       <field name="MIDDLE_BUTTON">TRUE</field>
@@ -714,90 +740,6 @@
               </next>
             </block>
           </next>
-        </block>
-      </statement>
-    </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="whenDraggedOver" id="NmKJ1,HQ7j!n0BbwuO#Q" x="-830" y="-330">
-      <field name="X_RAY">FALSE</field>
-      <field name="LEFT_BUTTON">TRUE</field>
-      <field name="MIDDLE_BUTTON">TRUE</field>
-      <field name="RIGHT_BUTTON">TRUE</field>
-      <value name="VALUE">
-        <block type="objectList" id="66K^vItqCV%neDZtO$`m">
-          <field name="FIELDNAME">mechanism_slider_height</field>
-        </block>
-      </value>
-      <statement name="DO_MOVE">
-        <block type="dragMove" id="i7yGLY1X#J^Zu{)^?NVL">
-          <field name="MODE">Z</field>
-          <value name="TARGETOBJ">
-            <block type="objectList" id="q@JB?)Ud/=y-qJ:de}94">
-              <field name="FIELDNAME">mechanism_slider_height</field>
-            </block>
-          </value>
-          <next>
-            <block type="procedures_callnoreturn" id="1v%2Q*wlM1F28e+pbsxr">
-              <mutation name="updateHeight"/>
-            </block>
-          </next>
-        </block>
-      </statement>
-    </block>
-    <block xmlns="https://developers.google.com/blockly/xml" type="whenMoved" id="*^-B0LXpNyKZ/Lj)UPDE" x="-270" y="-270">
-      <value name="OBJECT">
-        <shadow type="objectList" id="JQvPR7EO]^S4Io(S?]Gq">
-          <field name="FIELDNAME">&lt;none&gt;</field>
-        </shadow>
-        <block type="objectList" id="#iJ%mtBZ-sZwG%_7zn%C">
-          <field name="FIELDNAME">mechanism_slider_height</field>
-        </block>
-      </value>
-      <value name="DELTA">
-        <shadow type="math_number" id="x_*XeKzXNdfbgEs0uS=H">
-          <field name="NUM">0.01</field>
-        </shadow>
-      </value>
-      <statement name="DO_STOP">
-        <block type="Elfsquad/updateRequirementByCode" id="*BiUDNFhL{8e@up`,=.l">
-          <field name="featureCode">height</field>
-          <value name="value">
-            <block type="math_arithmetic" id="J+-gKor}GS.zDY,%`!K8">
-              <field name="OP">MULTIPLY</field>
-              <value name="A">
-                <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number">
-                  <field name="NUM">2</field>
-                </shadow>
-                <block type="math_arithmetic" id="HmGOzgSJf)}H*wUN(Wqe">
-                  <field name="OP">MINUS</field>
-                  <value name="A">
-                    <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number">
-                      <field name="NUM">2</field>
-                    </shadow>
-                    <block type="getObjTransform" id="cUCfPh!0nmX!SG?H*V,Y">
-                      <mutation xmlns="http://www.w3.org/1999/xhtml" useworldspace="false"></mutation>
-                      <field name="MODE">position</field>
-                      <field name="COORD">z</field>
-                      <value name="TARGETOBJ">
-                        <block type="objectList" id="1][JtSfj3qw(yYOW40pA">
-                          <field name="FIELDNAME">mechanism_slider_height</field>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                  <value name="B">
-                    <shadow type="math_number" id="Pp3JW9|J$xN._,e1xAju">
-                      <field name="NUM">0.38</field>
-                    </shadow>
-                  </value>
-                </block>
-              </value>
-              <value name="B">
-                <shadow type="math_number" id="E]/t1r/l2J2ZEfKZU]j4">
-                  <field name="NUM">2</field>
-                </shadow>
-              </value>
-            </block>
-          </value>
         </block>
       </statement>
     </block>
@@ -2387,7 +2329,7 @@
       </statement>
     </block>
   </tab>
-  <tab name="shelf" type="SecondaryTab" active="false" scrollx="-373.89999961853164" scrolly="31.046375926278188" scale="1">
+  <tab name="shelf" type="SecondaryTab" active="false" scrollx="-373.89999961853187" scrolly="31.04637592627813" scale="1">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="Pm0g)TOQN3:SRdx2kt0E" type="">horizontal_shelf</variable>
     </variables>
@@ -3683,7 +3625,7 @@
       </next>
     </block>
   </tab>
-  <tab name="ring" type="SecondaryTab" active="false" scrollx="-3.410605131648481e-13" scrolly="-168.88984560706615" scale="1">
+  <tab name="ring" type="SecondaryTab" active="false" scrollx="-6.821210263296962e-13" scrolly="-168.88984560706615" scale="1">
     <block xmlns="https://developers.google.com/blockly/xml" type="whenDraggedOver" id="O(xR)ugIAg.6OA%dw0Rx" x="112" y="287">
       <field name="X_RAY">FALSE</field>
       <field name="LEFT_BUTTON">TRUE</field>
