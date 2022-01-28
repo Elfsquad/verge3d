@@ -26,7 +26,7 @@ This block can be used to retrieve the value of a feature by its feature name.
 This block can be used to update the requirement of a feature by its feature code.
 
 ## Getting started
-You can refer to the sample post [here]() for a guide on how to setup this plugin.
+You can refer to the sample post [here](https://docs.elfsquad.io/blog/tutorial%20-%20verge3d%20viewer) for a guide on how to setup this plugin.
 
 ## Examples
 
