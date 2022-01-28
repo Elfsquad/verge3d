@@ -34,12 +34,15 @@
                 }
             }
 
+            console.log('elfsquadUpdateRequirementByCode', nodeId);
+
             if (nodeId) {
                 window.top.postMessage({
-                    type: 'updateRequirement',
-                    data: {
+                    name: 'elfsquad.updateRequirement',
+                    args: {
                         nodeId: nodeId,
-                        value: parseFloat(value)
+                        value: parseFloat(value),
+                        isSelection: false
                     }
                 }, '*');
             }
