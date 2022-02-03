@@ -1,0 +1,19 @@
+<template
+    color="#006fa5"
+    output="Dictionary">
+    <dummy>
+        <label>Current step</label>
+    </dummy>
+</template>
+
+<script>
+    function code(block){
+
+        const fun = Plug.provide('elfsquadGetCurrentStep', function(c) {
+            if (!window['elfsquad.step']) return {};
+            return window['elfsquad.step'];
+        });
+        
+        return [`${fun}()`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+    }
+</script>

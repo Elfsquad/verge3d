@@ -1,0 +1,19 @@
+<template
+    color="#006fa5"
+    output="Dictionary">
+    <dummy>
+        <label>Configuration</label>
+    </dummy>
+</template>
+
+<script>
+    function code(block){
+
+        const fun = Plug.provide('elfsquadGetConfiguration', function(c) {
+            if (!window['elfsquad.configuration']) return {};
+            return window['elfsquad.configuration'];
+        });
+        
+        return [`${fun}()`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+    }
+</script>

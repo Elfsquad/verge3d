@@ -546,7 +546,7 @@
       </statement>
     </block>
   </tab>
-  <tab name="mechanism" type="SecondaryTab" active="true" scrollx="638.7329711914062" scrolly="586.3052978515625" scale="0.6260121018585129">
+  <tab name="mechanism" type="SecondaryTab" active="true" scrollx="179" scrolly="1072" scale="1">
     <block xmlns="https://developers.google.com/blockly/xml" type="execScript" id="RdLg;*i8D$A#hUN9Wq48" x="-870" y="-850">
       <value name="TEXT">
         <shadow type="textMultiline" id="=e3lUkXeVk=P%67ZgxS:">
@@ -617,6 +617,27 @@
               </next>
             </block>
           </next>
+        </block>
+      </statement>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="Elfsquad/onStepChanged" id="SR4mV1^!4QV7R?H_Z0eh" x="290" y="-710">
+      <statement name="stmnt">
+        <block type="console.log" id="^lIsKGCEZ3,48?~p/M4p">
+          <value name="VALUE">
+            <shadow type="text" id="T0R_I7Q;l^*g6vwgi|1`">
+              <field name="TEXT">Step Changed</field>
+            </shadow>
+            <block type="dictGet" id="#Y#N3b$`gdge)RYILM2@">
+              <value name="DICT">
+                <block type="Elfsquad/getCurrentStep" id="$Hz`fQP[tIyAp_VPAtP8"/>
+              </value>
+              <value name="KEY">
+                <shadow type="text" id="G}R2zbvX)8gXY:@7mt1l">
+                  <field name="TEXT">title</field>
+                </shadow>
+              </value>
+            </block>
+          </value>
         </block>
       </statement>
     </block>
@@ -1109,7 +1130,7 @@
                     </block>
                   </value>
                   <value name="MIN">
-                    <shadow type="math_number" id="U`G$7c_^H]jEMNyj`G7H">
+                    <shadow type="math_number" id=":BmH`H{sf)L!r}sx}pby">
                       <field name="NUM">-1</field>
                     </shadow>
                     <block type="math_arithmetic" id="zd/D?lRm?Bkd``#0$}d:">
@@ -1170,7 +1191,7 @@
                         </block>
                       </value>
                       <value name="MIN">
-                        <shadow type="math_number" id="A+,Y4r*1^+Gn(@D9xk%c">
+                        <shadow type="math_number" id="1(5o,B*9X^Z=u9osY*HD">
                           <field name="NUM">-1</field>
                         </shadow>
                         <block type="math_arithmetic" id="HH_k||ep(+0dE,lleQ0!">

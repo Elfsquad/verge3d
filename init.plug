@@ -1,11 +1,17 @@
 <category name="Elfsquad" color="blue">
     <label text="Events"></label>
     <block type="onConfigurationUpdate"></block>   
+    <block type="onStepChanged"></block>   
     
-    <label text="Actions"></label>
+    <label text="Actions"></label>    
     <block type="getValueByCode"></block>
     <block type="getValueByName"></block>
     <block type="updateRequirementByCode"></block>
+
+    <label text="Variables"></label>
+    <block type="getCurrentStep"></block>
+    <block type="getConfiguration"></block>
+    
 </category>
 
 <script>
