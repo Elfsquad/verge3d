@@ -866,7 +866,7 @@ function setObjTransform(objSelector, isWorldSpace, mode, vector, offset){
 
 function elfsquadOnConfigurationUpdate() {
     return (function(cb){
-            window.parent.addEventListener('message', function(e){
+            window.addEventListener('message', function(e){
                 if (e.data && e.data.name == 'elfsquad.configurationUpdated'){
                     window['elfsquad.configuration'] = e.data.args;
                     cb();
@@ -896,7 +896,7 @@ function dictGet(dict, key) {
 
 function elfsquadOnStepChanged() {
     return (function(cb){
-            window.parent.addEventListener('message', function(e){
+            window.addEventListener('message', function(e){
                 if (e.data && e.data.name == 'elfsquad.stepChanged'){
                     window['elfsquad.step'] = e.data.args;
                     cb();

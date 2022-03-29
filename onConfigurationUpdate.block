@@ -20,7 +20,7 @@
         const stmnt = Blockly.JavaScript.statementToCode(block, 'stmnt');
         
         const fun = Plug.provide('elfsquadOnConfigurationUpdate', function(cb){
-            window.parent.addEventListener('message', function(e){
+            window.addEventListener('message', function(e){
                 if (e.data && e.data.name == 'elfsquad.configurationUpdated'){
                     window['elfsquad.configuration'] = e.data.args;
                     cb();
