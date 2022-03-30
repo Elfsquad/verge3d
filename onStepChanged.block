@@ -20,7 +20,7 @@
         const stmnt = Blockly.JavaScript.statementToCode(block, 'stmnt');
         
         const fun = Plug.provide('elfsquadOnStepChanged', function(cb){
-            window.addEventListener('message', function(e){
+            window.parent.addEventListener('message', function(e){
                 if (e.data && e.data.name == 'elfsquad.stepChanged'){
                     window['elfsquad.step'] = e.data.args;
                     cb();
